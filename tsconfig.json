@@ -3,11 +3,22 @@
 		"target": "ES2022",
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
-		"lib": ["ES2022"],
+		"lib": ["ES2022", "DOM"],
 		"strict": true,
 		"noEmit": true,
 		"skipLibCheck": true,
+		"allowJs": true,
+		"checkJs": true,
 		"types": ["node"]
 	},
-	"include": ["extensions/**/*.ts", "extensions/**/*.d.ts"]
+	"include": [
+		"extensions/**/*.ts",
+		"extensions/**/*.d.ts",
+		"extensions/branch-review/review-selection.js",
+		"extensions/branch-review/review-draft-panel.js",
+		"extensions/branch-review/review-file-tree.js",
+		"extensions/branch-review/review-theme.js",
+		"extensions/branch-review/review-comments.js",
+		"extensions/branch-review/review-prompt.js"
+	]
 }
