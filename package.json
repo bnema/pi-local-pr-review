@@ -1,0 +1,35 @@
+{
+	"name": "pi-local-pr-review",
+	"version": "0.1.0",
+	"description": "Browser-based local PR-style review UI for pi sessions",
+	"type": "module",
+	"keywords": [
+		"pi-package",
+		"pi",
+		"review",
+		"pull-request",
+		"browser",
+		"diff"
+	],
+	"license": "MIT",
+	"pi": {
+		"extensions": [
+			"./extensions/index.ts"
+		]
+	},
+	"peerDependencies": {
+		"@mariozechner/pi-ai": "*",
+		"@mariozechner/pi-coding-agent": "*",
+		"@sinclair/typebox": "*"
+	},
+	"devDependencies": {
+		"@mariozechner/pi-ai": "*",
+		"@mariozechner/pi-coding-agent": "*",
+		"@sinclair/typebox": "*",
+		"@types/node": "^24.0.0",
+		"typescript": "^5.9.0"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit"
+	}
+}
