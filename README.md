@@ -11,7 +11,7 @@ It launches the shared `local-pr-review-server`, opens a GitHub-style branch dif
 - shows the current branch diff against a base ref in a browser UI
 - supports summary comments and inline file comments
 - sends the submitted review back to the active session as a user message
-- stops automatically after a successful submission
+- after submission, lets you keep editing, reset the draft, or close the server from the UI
 
 ## Install
 
@@ -74,5 +74,6 @@ Examples:
 ## Notes
 
 - The review server is session-bound.
+- After submitting a review, the browser UI stays available so you can keep editing, reset the draft for another pass, or close the server explicitly.
 - When a review is submitted while pi is busy, feedback is queued as a follow-up message.
 - The initial browser UI/server implementation was adapted from the local branch review flow in Superpowers and retargeted for pi.
