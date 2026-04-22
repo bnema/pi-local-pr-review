@@ -1,6 +1,6 @@
 {
 	"name": "pi-local-pr-review",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Pi adapter for the shared local-pr-review-server",
 	"type": "module",
 	"homepage": "https://github.com/bnema/pi-local-pr-review",
@@ -31,7 +31,7 @@
 		"@sinclair/typebox": "*"
 	},
 	"dependencies": {
-		"local-pr-review-server": "https://codeload.github.com/bnema/local-pr-review-server/tar.gz/5bb7689873dcfaa8b010467370aad22474d424cf"
+		"local-pr-review-server": "https://codeload.github.com/bnema/local-pr-review-server/tar.gz/v0.1.0"
 	},
 	"devDependencies": {
 		"@mariozechner/pi-ai": "*",
