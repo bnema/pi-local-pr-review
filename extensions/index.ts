@@ -3,8 +3,7 @@ import {
 	execFileSync,
 	spawn,
 } from "node:child_process";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { createRequire } from "node:module";
 
 import { StringEnum } from "@mariozechner/pi-ai";
 import type {
@@ -14,10 +13,10 @@ import type {
 } from "@mariozechner/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
 
-import { formatReviewPrompt } from "./branch-review/review-prompt.js";
+import { formatReviewPrompt } from "local-pr-review-server/review-prompt.js";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const reviewServerPath = path.join(__dirname, "branch-review", "server.cjs");
+const require = createRequire(import.meta.url);
+const reviewServerPath = require.resolve("local-pr-review-server/server.cjs");
 
 const TOOL_NAME = "local_pr_review";
 const TOOL_LABEL = "Local PR Review";
@@ -145,9 +144,9 @@ function startBridge(handlers: {
 		cwd: handlers.repo,
 		env: {
 			...process.env,
-			PI_LOCAL_PR_REVIEW_SESSION: handlers.sessionId,
-			PI_LOCAL_PR_REVIEW_REPO: handlers.repo,
-			PI_LOCAL_PR_REVIEW_BASE: handlers.baseRef,
+			LOCAL_PR_REVIEW_CONTEXT_ID: handlers.sessionId,
+			LOCAL_PR_REVIEW_REPO: handlers.repo,
+			LOCAL_PR_REVIEW_BASE: handlers.baseRef,
 		},
 		stdio: ["pipe", "pipe", "pipe"],
 	});

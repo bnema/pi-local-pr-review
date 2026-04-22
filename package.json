@@ -1,8 +1,16 @@
 {
 	"name": "pi-local-pr-review",
 	"version": "0.1.0",
-	"description": "Browser-based local PR-style review UI for pi sessions",
+	"description": "Pi adapter for the shared local-pr-review-server",
 	"type": "module",
+	"homepage": "https://github.com/bnema/pi-local-pr-review",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bnema/pi-local-pr-review.git"
+	},
+	"bugs": {
+		"url": "https://github.com/bnema/pi-local-pr-review/issues"
+	},
 	"keywords": [
 		"pi-package",
 		"pi",
@@ -21,6 +29,9 @@
 		"@mariozechner/pi-ai": "*",
 		"@mariozechner/pi-coding-agent": "*",
 		"@sinclair/typebox": "*"
+	},
+	"dependencies": {
+		"local-pr-review-server": "https://codeload.github.com/bnema/local-pr-review-server/tar.gz/a1be95bdf520ecd5bf070b5da9a34481fd41fe2a"
 	},
 	"devDependencies": {
 		"@mariozechner/pi-ai": "*",

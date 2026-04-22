@@ -1,11 +1,12 @@
 # pi-local-pr-review
 
-`pi-local-pr-review` adds a browser-based local PR review flow to pi.
+`pi-local-pr-review` is the pi-specific adapter for the shared `local-pr-review-server`.
 
-It starts a local HTTP server, opens a GitHub-style branch diff in the browser, lets you draft summary + inline comments, and sends the submitted review back into the active pi session.
+It launches the shared `local-pr-review-server`, opens a GitHub-style branch diff in the browser, lets you draft summary + inline comments, and sends the submitted review back into the active pi session.
 
 ## What it does
 
+- acts as the pi integration layer around the shared review server
 - starts a local review server bound to the current pi session
 - shows the current branch diff against a base ref in a browser UI
 - supports summary comments and inline file comments
@@ -14,7 +15,30 @@ It starts a local HTTP server, opens a GitHub-style branch diff in the browser, 
 
 ## Install
 
+### From GitHub
+
+Install globally:
+
+```bash
+pi install git:github.com/bnema/pi-local-pr-review
+```
+
+Install for the current project only:
+
+```bash
+pi install -l git:github.com/bnema/pi-local-pr-review
+```
+
+Pi clones the adapter and runs `npm install`, which pulls the shared `local-pr-review-server` dependency automatically.
+
 ### Local development
+
+For local hacking, keep the repos side by side:
+
+- `../pi-local-pr-review`
+- `../local-pr-review-server`
+
+Then install this package into pi from disk:
 
 ```bash
 pi install /absolute/path/to/pi-local-pr-review
@@ -27,6 +51,8 @@ pi install -l /absolute/path/to/pi-local-pr-review
 ```
 
 ## Usage
+
+After installation, ask pi to open the review UI or use one of the commands below.
 
 ### Slash commands
 
