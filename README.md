@@ -1,6 +1,14 @@
 # pi-local-pr-review
 
-`pi-local-pr-review` is the pi-specific adapter for the shared `local-pr-review-server`.
+> **Archived:** this repo has been superseded by [`bnema/local-pr-review-server`](https://github.com/bnema/local-pr-review-server), which now ships the shared runtime, the OpenCode adapter, and the installable Pi extension package.
+
+Install the replacement package instead:
+
+```bash
+pi install git:github.com/bnema/local-pr-review-server@<release-tag>
+```
+
+`pi-local-pr-review` was the pi-specific adapter for the shared `local-pr-review-server`.
 
 It launches the shared `local-pr-review-server`, opens a GitHub-style branch diff in the browser, lets you draft summary + inline comments, and sends the submitted review back into the active pi session.
 
@@ -20,13 +28,13 @@ It launches the shared `local-pr-review-server`, opens a GitHub-style branch dif
 Install globally:
 
 ```bash
-pi install git:github.com/bnema/pi-local-pr-review
+pi install git:github.com/bnema/local-pr-review-server@<release-tag>
 ```
 
 Install for the current project only:
 
 ```bash
-pi install -l git:github.com/bnema/pi-local-pr-review
+pi install -l git:github.com/bnema/local-pr-review-server@<release-tag>
 ```
 
 Pi clones the adapter and runs `npm install`, which pulls the shared `local-pr-review-server` dependency automatically.

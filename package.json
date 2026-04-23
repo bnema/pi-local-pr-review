@@ -1,15 +1,15 @@
 {
 	"name": "pi-local-pr-review",
 	"version": "0.1.1",
-	"description": "Pi adapter for the shared local-pr-review-server",
+	"description": "Archived shim repo — use bnema/local-pr-review-server instead",
 	"type": "module",
-	"homepage": "https://github.com/bnema/pi-local-pr-review",
+	"homepage": "https://github.com/bnema/local-pr-review-server",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/bnema/pi-local-pr-review.git"
+		"url": "git+https://github.com/bnema/local-pr-review-server.git"
 	},
 	"bugs": {
-		"url": "https://github.com/bnema/pi-local-pr-review/issues"
+		"url": "https://github.com/bnema/local-pr-review-server/issues"
 	},
 	"keywords": [
 		"pi-package",
